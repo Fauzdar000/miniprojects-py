@@ -1,6 +1,10 @@
-# simple calculator
 
-
+def get_number(msg):
+    while True:
+        try:
+            return float(input(msg))
+        except ValueError:
+            print(" please enter a valid number")
 
 def calculator(a , b , operations):
     if operations == '+':
@@ -19,8 +23,8 @@ def calculator(a , b , operations):
 while True:
     print("\n ---- simple calculator----")
 
-    num1 = float(input("enter first number : "))
-    num2 = float(input("enter seconnd number"))
+    num1 = get_number("enter first number : ")
+    num2 = get_number("enter seconnd number")
     ops = input("choose operation + - / * :")
 
     result = calculator(num1 , num2 , ops)
